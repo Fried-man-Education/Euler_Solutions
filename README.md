@@ -8,4 +8,4 @@ This repo was created for educational purposes. It serves as a collection for th
 - [Sellers Crisp](https://github.com/sellerscrisp) - Undecided
 - [Andrew Friedman](https://github.com/Fried-man) - Assembly
 - [Zach Lloyd](https://github.com/zachlloyd01) - Undecided
-- [Pedro Victor](https://github.com/PedroVictorCoding) - Undecided
+- [Pedro Victor](https://github.com/PedroVictorCoding) - C++
