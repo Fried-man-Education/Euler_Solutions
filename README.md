@@ -7,5 +7,5 @@ This repo was created for educational purposes. It serves as a collection for th
 - [Thomas Contis](https://github.com/tcontis) - Undecided
 - [Sellers Crisp](https://github.com/sellerscrisp) - Undecided
 - [Andrew Friedman](https://github.com/Fried-man) - Assembly
-- [Zach Lloyd](https://github.com/zachlloyd01) - Undecided
+- [Zach Lloyd](https://github.com/zachlloyd01) - c#
 - [Pedro Victor](https://github.com/PedroVictorCoding) - C++
