@@ -6,6 +6,6 @@ This repo was created for educational purposes. It serves as a collection for th
 - [Milan Capoor](https://github.com/mcapoor) - C
 - [Thomas Contis](https://github.com/tcontis) - Undecided
 - [Sellers Crisp](https://github.com/sellerscrisp) - Undecided
-- [Andrew Friedman](https://github.com/Fried-man) - Assembly
+- [Andrew Friedman](https://github.com/Fried-man) - ARM Assembly
 - [Zach Lloyd](https://github.com/zachlloyd01) - C#
 - [Pedro Victor](https://github.com/PedroVictorCoding) - Python
