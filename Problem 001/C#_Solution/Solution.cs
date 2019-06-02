@@ -1,4 +1,4 @@
-﻿    /*
+﻿/*
     Problem #: 1
     Author: Zachary "Zach" Lloyd
     Created: 06/01/2019
