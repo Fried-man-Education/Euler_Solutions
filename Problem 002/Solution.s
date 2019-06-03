@@ -13,12 +13,12 @@ _start:
 
 loop:
     CMP r1, r3
-    BGE end            // might need to change to >
+    BGE end
     ADD r2, r1, r0
     MOV r0, r1
     MOV r1, r2 
-    TST r1, #1         // broken part of code
-    BNE loop           // pt. 2
+    TST r1, #1         // check if odd
+    BNE loop           // if so goto loop
     ADD r4, r4, r1
     B loop
 
