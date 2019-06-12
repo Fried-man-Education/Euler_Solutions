@@ -1,3 +1,9 @@
+/* 
+Problem: 004
+Author: Milan Capoor
+Date: 8 June 2019
+*/
+
 //PROBLEM 6: Sum Square Difference
 /*  The sum of the squares of the first ten natural numbers is,
       1^2 + 2^2 + ... + 10^2 = 385
@@ -11,19 +17,19 @@ one hundred natural numbers and the square of the sum.
 
 #include <stdio.h>
 
-int sum_of_squares() { //square each term and find their sum
+int sum_of_squares(int min_value, int max_number) { //square each term and find their sum
     int sum = 0;
     int product;
-    for (int i = 0; i <= 100; i++){
+    for (int i = min_value; i <= max_number; i++){
         product = i * i; //square it
         sum += product; //sum them 
     }
     return sum;
 }
 
-int square_of_sum() { //sqaure the sum
+int square_of_sum(int min_value, int max_number) { //square the sum of the terms
     int sum = 0;
-    for (int i = 0; i <= 100; i++) {
+    for (int i = min_value; i <= max_number; i++) {
         sum += i; //sum them
     }
     sum *= sum; //square them
@@ -31,7 +37,9 @@ int square_of_sum() { //sqaure the sum
 }
 
 int main() {
-    int result = square_of_sum() - sum_of_squares(); //find the difference
+    int min = 0; //lowest value
+    int max = 100; //highest value
+    int result = square_of_sum(min, max) - sum_of_squares(min, max); //find the difference
     printf("The difference in the sum of the squares of the natural numbers (1-100) and the square of the sum is: %d", result);
     return 0;
 }
