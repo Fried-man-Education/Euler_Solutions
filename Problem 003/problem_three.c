@@ -17,7 +17,7 @@ What is the largest prime factor of the number 600851475143 ?
 
 long long int check_primality(long long int number) { //determine if a given number is prime
     if (number % 2 == 0) {
-        return 1;
+        return 0;
     } else {
         for (long long int i = 2; i <= sqrt(number); i++) { //check each divisor up to the square root
             if (number % i == 0) { //if any number is a factor
@@ -29,7 +29,7 @@ long long int check_primality(long long int number) { //determine if a given num
 }
 
 int main() {
-    long long int number = 600851475143;
+    long long int number = 229498314386719938;
 
     if (check_primality(number) == 1) {
         printf("The number is prime.\n");
