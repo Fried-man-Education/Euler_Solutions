@@ -10,7 +10,6 @@ Find the sum of all the primes below two million.
 */
 
 #include <stdio.h>
-#include <math.h>
 int check_prime(int n) {
     if (n < 2 || n % 2 == 0) {
         return 0;
@@ -38,5 +37,3 @@ int main() {
     printf("%llu\n", sum_primes(2000000));
     return 0;
 }
-
-//1179908154
