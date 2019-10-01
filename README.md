@@ -23,7 +23,7 @@ ARM is a 32-bit architecture that has a simple goal in mind: flexibility. While 
 * `b <line_number>` sets breakpoint at <line_number>
 * `run` runs program until breakpoint or exit
 * `info r` gets info on all registers
-### 
+### C
 C is a general-purpose, procedural computer programming language. By design, C provides constructs that map efficiently to typical machine instructions and has found lasting use in applications previously coded in assembly language. Such applications include operating systems and various application software for computers, from supercomputers to embedded systems. It was originally developed at Bell Labs by Dennis Ritchie. Later, it was applied to re-implementing the kernel of the Unix operating system and a huge variety of other projects. Nowadays, it is one of the most widely used programming languages, with C compilers from various vendors available for the majority of existing computer architectures and operating systems. Below are some of the necessary commands to run our `Solution.c` files.
 #### For Compiling:
 `gcc Solution.c -o Solution` compiles the code into an executable called `Solution`
