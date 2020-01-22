@@ -1,7 +1,7 @@
 #||
-  Problem #: 041
+  Problem #: 046
   Author: Andrew Friedman
-  Created: 01/20/2020
+  Created: 01/22/2020
 ||#
 
 (defun isRepresentable (n) ; checks if integer can be written using Goldbach's other conjecture
