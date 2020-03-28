@@ -6,9 +6,12 @@
 import os
 import time
 import subprocess
+import os.path
+from os import path
 from glob import glob
 
 def GetSpeeds(folderName): # Creates README of directory's solution data
+    print(" Checking " + folderName + "...")
     readData = "# " + folderName + "\n"
     # TODO: webscrape problem description
     readData += "## Data \n"
@@ -16,18 +19,18 @@ def GetSpeeds(folderName): # Creates README of directory's solution data
     readData += "| Language | Time (seconds) | Notes |\n"
     readData += "| --- | --- | --- |\n"
     readData += convertValues(CheckPython(folderName)) + "\n"
-    print(" Completed running python solution")
+    print("  Completed running python solution")
     readData += convertValues(CheckCSharp(folderName)) + "\n"
-    print(" Completed running C# solution")
+    print("  Completed running C# solution")
     readData += convertValues(CheckC(folderName)) + "\n"
-    print(" Completed running Objective C solution")
+    print("  Completed running Objective C solution")
     readData += convertValues(CheckLisp(folderName)) + "\n"
-    print(" Completed running Common Lisp solution")
+    print("  Completed running Common Lisp solution")
     readData += convertValues(CheckAssembly(folderName)) + "\n"
-    print(" Completed running ARM Assembly solution")
+    print("  Completed running ARM Assembly solution")
     readMe = open("./" + folderName + "/README.md","w+")
     readMe.write(readData)
-    print("Completed running " + folderName + " programs...")
+    print(" Completed running " + folderName + " programs...")
 
 def CheckPython(folderName):
     if os.path.isfile("./" + folderName + "/Solution.py"):
@@ -117,8 +120,35 @@ def convertValues(runningData): # Converts tuple to table-friendly string
         output += str(x) + " | "
     return output
 
-folders = [ p.replace('/', '') for p in glob('*/') ] # finds immediate folders in directory
-folders.sort() # sorts string[]
+def checkEverything():
+    print(" Checking everything...")
+    folders = [ p.replace('/', '') for p in glob('*/') ] # finds immediate folders in directory
+    folders.sort() # sorts string[]
 
-for folder in folders: # iterate through all folders
-    GetSpeeds(folder)
+    for folder in folders: # iterate through all folders
+        GetSpeeds(folder)
+    print(" Everything is checked.")
+
+print("Checker.py Command Line:")
+while(True):
+    userInput = str(raw_input(">"))
+    if(userInput == "help"):
+        print(" List of commands:\n  \"check everything\" - runs speed tests everywhere\n  \"check <folder name>\" - runs speed tests on folder\n  \"exit\" - terminates program\n  \"help\" - gives list of commands\n  \"ls\" - lists folders")
+    elif(userInput[0:5] == "check"):
+        userInput = userInput[6:len(userInput)]
+        if(userInput == "everything"):
+            checkEverything()
+        elif(path.exists("./" + userInput)):
+            GetSpeeds(userInput)
+        else:
+            print(" " + userInput + "does not exist.")
+    elif(userInput == "exit"):
+        break
+    elif(userInput == "ls"):
+        folders = [ p.replace('/', '') for p in glob('*/') ] # finds immediate folders in directory
+        folders.sort() # sorts string[]
+        print(" Folders:")
+        for folder in folders: # iterate through all folders
+            print("  " + folder)
+    else:
+        print(" Command \"" + userInput + "\" does not exist. Type \"help\" for a list of commands.")
