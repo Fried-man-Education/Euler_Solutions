@@ -4,6 +4,6 @@
 | --- | --- | --- |
 | Python | n/a | No solution | 
 | C# | n/a | No solution | 
-| Objective C | 0.196150064468 | Valid solution | 
-| Common Lisp | 194.28427887 | Too slow | 
+| Objective C | 0.205029964447 | Valid solution | 
+| Common Lisp | 3.41575908661 | Valid solution | 
 | ARM Assembly | n/a | No solution | 
